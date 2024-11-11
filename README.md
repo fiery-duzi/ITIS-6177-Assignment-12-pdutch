@@ -2,6 +2,15 @@
 
 This application is generated using [LoopBack initializer package](https://github.com/loopbackio/create-loopback).
 
+## Steps used to generate API
+I followed along with the Getting Started guide [here](https://loopback.io/doc/en/lb4/Getting-started.html).
+The following steps were involved:
+1. Install Loopback CLI tool lb4.
+2. Use lb4 to create a new app, which I called loopback-demo.
+3. Create a new HelloController using lb4's controller command.
+4. Use lb4 to create a new datasource, model, repository and controller for junk.
+5. Test endpoints using the auto-generated OpenAPI UI.
+
 ## Install dependencies
 
 By default, dependencies were installed when this application was generated.
