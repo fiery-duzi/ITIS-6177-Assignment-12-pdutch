@@ -1,0 +1,48 @@
+{
+  "name": "loopback-demo",
+  "version": "0.0.1",
+  "description": "Patrick&#39;s Loopback 4 demo.",
+  "private": true,
+  "author": "Patrick Dutch <pdutch@charlotte.edu>",
+  "license": "UNLICESED",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": "16 || 18 || 20"
+  },
+  "scripts": {
+    "build": "lb-tsc",
+    "build:watch": "lb-tsc --watch",
+    "pretest": "npm run rebuild",
+    "premigrate": "npm run build",
+    "migrate": "node ./dist/migrate",
+    "preopenapi-spec": "npm run build",
+    "openapi-spec": "node ./dist/openapi-spec",
+    "prestart": "npm run rebuild",
+    "start": "node -r source-map-support/register .",
+    "clean": "lb-clean dist *.tsbuildinfo .eslintcache",
+    "rebuild": "npm run clean && npm run build"
+  },
+  "files": [
+    "README.md",
+    "dist",
+    "src",
+    "!*/__tests__"
+  ],
+  "dependencies": {
+    "@loopback/boot": "^6.1.0",
+    "@loopback/core": "^5.1.0",
+    "@loopback/repository": "^6.1.0",
+    "@loopback/rest": "^13.1.0",
+    "@loopback/rest-explorer": "^6.1.0",
+    "@loopback/service-proxy": "^6.1.0",
+    "tslib": "^2.6.0"
+  },
+  "devDependencies": {
+    "@loopback/build": "^10.1.0",
+    "source-map-support": "^0.5.21",
+    "@loopback/testlab": "^6.1.0",
+    "@types/node": "^22.9.0",
+    "typescript": "~5.1.5"
+  }
+}
